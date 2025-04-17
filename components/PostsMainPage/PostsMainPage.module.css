@@ -2,7 +2,6 @@
   display: grid;
   gap: 45px;
   grid-template-columns: repeat(2, 1fr);
-  margin-top: 42px;
   justify-content: center;
 }
 
@@ -18,14 +17,15 @@
   overflow: hidden;
 }
 
-.card__title-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.card__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card__title,
-.card__tag,.card__text {
+.card__tag,
+.card__text {
   padding: 10px;
   margin: 0;
 }
@@ -38,4 +38,3 @@
   padding: 0;
   display: block;
 }
-
