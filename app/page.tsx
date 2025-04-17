@@ -1,4 +1,3 @@
-// app/page.tsx
 import PostsMainPage from "@/components/PostsMainPage/PostsMainPage";
 import TagsFilter from "@/components/TagsFilter/TagsFilter";
 import { Metadata } from "next";
@@ -15,9 +14,11 @@ type Props = {
 };
 
 const getAllPostsMain = async (tag?: string) => {
+  const baseURL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"; 
+
   const url = tag
-    ? `http://localhost:3000/api/posts?tag=${tag}`
-    : `http://localhost:3000/api/posts`;
+    ? `${baseURL}/api/posts?tag=${tag}` // Используем baseURL
+    : `${baseURL}/api/posts`; // Используем baseURL
 
   const response = await fetch(url, {
     cache: "no-store",
@@ -30,7 +31,6 @@ const getAllPostsMain = async (tag?: string) => {
   const data = await response.json();
   return data.posts;
 };
-
 export default async function Home({ searchParams }: Props) {
   const posts = await getAllPostsMain(searchParams.tag);
 

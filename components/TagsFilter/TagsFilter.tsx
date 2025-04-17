@@ -1,8 +1,6 @@
-// components/TagsFilter.tsx
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-
 export default function TagsFilter() {
   const router = useRouter();
   const searchParams = useSearchParams();
