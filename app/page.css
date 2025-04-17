@@ -1,0 +1,28 @@
+.tags {
+  display: flex;
+  gap: 14px;
+}
+
+.tag_bth {
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #b5b5b5;
+}
+.tag_bth--frontend {
+  background-color: aqua;
+}
+
+.tag_bth--backend {
+  background-color: rgb(7, 243, 129);
+}
+
+.tag_bth:hover {
+  opacity: 0.8;
+}
+
+.tag_bth:active {
+  scale: 1.05;
+}
